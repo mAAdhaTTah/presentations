@@ -1,0 +1,9 @@
+<div
+        id="{{attributes.name}}"
+        class="step"
+        data-x="{{attributes.x}}"
+        data-y="{{attributes.y}}"
+        {{#if attributes.rotate}}data-rotate="{{attributes.rotate}}"{{/if}}
+        {{#if attributes.scale}}data-scale="{{attributes.scale}}"{{/if}}>
+    {{{body}}}
+</div>

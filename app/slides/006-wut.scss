@@ -1,0 +1,17 @@
+#wut {
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.past {
+        opacity: 0.3;
+    }
+
+    p {
+        transform: rotate(-45deg);
+        font-size: 4em;
+        text-align: center;
+    }
+}

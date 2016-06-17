@@ -1,0 +1,12 @@
+#next-steps {
+    width: 650px;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.past {
+        opacity: 0.3;
+    }
+}

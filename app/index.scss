@@ -1,0 +1,33 @@
+body {
+    font-family: 'Vollkorn', sans-serif;
+    min-height: 740px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Unica One', sans-serif;
+}
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    line-height: 1.5;
+    transition: opacity 1s;
+    opacity: 0.3;
+    display: flex;
+    flex-direction: column;
+
+    &.active {
+        opacity: 1;
+    }
+
+    pre {
+        font-size: .75em;
+        overflow: visible;
+    }
+}

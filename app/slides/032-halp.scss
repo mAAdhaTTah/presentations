@@ -1,0 +1,12 @@
+#halp {
+    justify-content: center;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.past {
+        opacity: 0.3;
+    }
+}

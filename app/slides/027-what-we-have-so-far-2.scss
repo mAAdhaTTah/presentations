@@ -1,0 +1,11 @@
+#what-we-have-so-far-2 {
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.past {
+        opacity: 0.3;
+    }
+}

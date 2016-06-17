@@ -1,0 +1,13 @@
+#cool-whats-next {
+    justify-content: center;
+    font-size: 3em;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.past {
+        opacity: 0.3;
+    }
+}

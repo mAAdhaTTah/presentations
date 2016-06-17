@@ -1,0 +1,12 @@
+#what-we-have-so-far {
+    width: 650px;
+    opacity: 0;
+
+    &.active {
+        opacity: 1;
+    }
+
+    &.past {
+        opacity: 0.3;
+    }
+}

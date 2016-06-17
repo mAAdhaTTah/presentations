@@ -1,0 +1,23 @@
+#reasonable-data-flow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+        width: 100%;
+    }
+
+    p {
+        width: 500px;
+    }
+
+    ul {
+        max-width: 30%;
+        float: right;
+    }
+
+    img {
+        float: left;
+        width: 100%;
+    }
+}
