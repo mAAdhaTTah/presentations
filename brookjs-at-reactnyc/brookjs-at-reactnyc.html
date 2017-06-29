@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/prism/prism.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown="slides/brookjs-at-reactnyc/title.md"></section>
+				<section data-markdown="slides/about-me.md"></section>
+				<section data-markdown="slides/brookjs-at-reactnyc/react+cycle.js.md"></section>
+				<section data-markdown="slides/brookjs-at-reactnyc/agenda.md"></section>
+				<section>
+					<section data-markdown="slides/react/lets-talk-about-react.md"></section>
+					<section data-markdown="slides/react/declarative-views.md"></section>
+					<section data-markdown="slides/react/thinking-in-react.md"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/functional-programming/immutable-data.md"></section>
+					<section data-markdown="slides/functional-programming/map-filter-reduce.md"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/redux/unidirectional-data.md"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/cycle.js/everything-is-a-stream.md"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/observables/what-is-an-observable.md"></section>
+					<section data-markdown="slides/observables/stream-of-events.md"></section>
+					<section data-markdown="slides/observables/arrays-of-events.md"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/cycle.js/pure-function-of-observables.md"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/brookjs/the-big-reveal.md"></section>
+					<section data-markdown="slides/brookjs/delta-functions.md"></section>
+					<section data-markdown="slides/brookjs/application-bootstrapping.md"></section>
+				</section>
+				<section>
+					<section data-markdown="slides/brookjs/current-status-2017-06-26.md"></section>
+					<section data-markdown="slides/brookjs/get-involved.md"></section>
+				</section>
+				<section data-markdown="slides/thank-you.md"></section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				width: '65%',
+				height: '100%',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/prism/prism.js', async: true, callback: function() { Prism.highlightAll(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
