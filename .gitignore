@@ -29,3 +29,6 @@ public/vendor
 
 # Debug log from npm
 npm-debug.log
+
+# Build files
+/dist
