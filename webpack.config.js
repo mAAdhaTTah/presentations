@@ -8,6 +8,7 @@ const common = {
     devtool: 'source-map',
     entry: [
         'babel-polyfill',
+        'react-hot-loader/patch',
         './src/index'
     ],
     output: {
@@ -54,6 +55,7 @@ const dev = {
             template: path.join(__dirname, '200.html'),
             filename: 'index.html'
         }),
+        new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
     ],
