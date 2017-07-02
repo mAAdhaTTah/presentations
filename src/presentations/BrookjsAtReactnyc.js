@@ -4,6 +4,8 @@ import React from 'react';
 import { Deck, Heading, Slide, Text } from 'spectacle';
 import createTheme from 'spectacle/lib/themes/default';
 
+import { AboutMe } from '../slides';
+
 let theme = createTheme({
     primary: '#111111',
     secondary: '#EEEEEE',
@@ -20,6 +22,13 @@ theme = {
         ...theme.screen,
         components: {
             ...theme.screen.components,
+            heading: {
+                ...theme.screen.components.heading,
+                h3: {
+                    ...theme.screen.components.heading.h3,
+                    color: theme.screen.colors.secondary
+                }
+            },
             text: {
                 ...theme.screen.components.text,
                 color: theme.screen.colors.secondary
@@ -29,8 +38,8 @@ theme = {
 };
 
 export default () => (
-    <Deck transitionDuration={500} theme={theme}>
-        <Slide>
+    <Deck transition={['slide']} transitionDuration={500} theme={theme}>
+        <Slide transition={['slide']}>
             <Heading size={1} fit lineHeight={1}>
                 Meet
             </Heading>
@@ -41,5 +50,6 @@ export default () => (
                 A framework for building streaming web applications.
             </Text>
         </Slide>
+        <AboutMe />
     </Deck>
 );
