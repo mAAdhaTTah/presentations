@@ -1,8 +1,8 @@
-import 'normalize.css';
-import 'spectacle/lib/themes/default/index.css';
-import React from 'react';
-import { Deck, Heading, Slide } from 'spectacle';
-import createTheme from 'spectacle/lib/themes/default';
+import 'normalize.css'
+import 'spectacle/lib/themes/default/index.css'
+import React from 'react'
+import { Deck, Heading, Slide } from 'spectacle'
+import createTheme from 'spectacle/lib/themes/default'
 
 const theme = createTheme({
     primary: 'white',
@@ -12,7 +12,7 @@ const theme = createTheme({
 }, {
     primary: 'Montserrat',
     secondary: 'Helvetica'
-});
+})
 
 export default () => (
     <Deck transitionDuration={500} theme={theme}>
@@ -22,4 +22,4 @@ export default () => (
             </Heading>
         </Slide>
     </Deck>
-);
+)

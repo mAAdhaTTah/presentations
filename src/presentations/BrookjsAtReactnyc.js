@@ -1,8 +1,8 @@
-import 'normalize.css';
-import 'spectacle/lib/themes/default/index.css';
-import React from 'react';
-import { Deck, Heading, Slide, Text } from 'spectacle';
-import createTheme from 'spectacle/lib/themes/default';
+import 'normalize.css'
+import 'spectacle/lib/themes/default/index.css'
+import React from 'react'
+import { Deck } from 'spectacle'
+import createTheme from 'spectacle/lib/themes/default'
 
 import { AboutMe } from '../slides';
 
@@ -14,7 +14,7 @@ let theme = createTheme({
 }, {
     primary: 'Montserrat',
     secondary: 'Open Sans'
-});
+})
 
 theme = {
     ...theme,
@@ -35,7 +35,7 @@ theme = {
             }
         }
     }
-};
+}
 
 export default () => (
     <Deck transition={['slide']} transitionDuration={500} theme={theme}>

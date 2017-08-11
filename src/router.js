@@ -1,12 +1,12 @@
-import React from 'react';
-import paramCase from 'param-case';
-import sheet from 'sheet-router';
-import * as Prezis from './presentations';
+import React from 'react'
+import paramCase from 'param-case'
+import sheet from 'sheet-router'
+import * as Prezis from './presentations'
 
 const titleCase = text => text.replace(/([A-Z])/g, ' $1')
     .replace(/(By|At)/, word => word.toLowerCase())
     .replace(/(Reactnyc)/, () => 'ReactNYC')
-    .replace(/(Brookjs)/, () => 'brookjs');
+    .replace(/(Brookjs)/, () => 'brookjs')
 
 const IndexRoute = () => (
     <div>
@@ -20,13 +20,13 @@ const IndexRoute = () => (
             ))}
         </ul>
     </div>
-);
+)
 
 const routes = [
     ['/', () => IndexRoute],
     ...Object.entries(Prezis).map(([key, Component]) =>
         [`/${paramCase(key)}`, () => Component]
     )
-];
+]
 
-export default sheet({ default: '/' }, routes);
+export default sheet({ default: '/' }, routes)
