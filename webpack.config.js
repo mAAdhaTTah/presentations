@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const WebpackNotifierPlugin = require('webpack-notifier');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BabiliPlugin = require('babili-webpack-plugin');
 
@@ -19,7 +20,8 @@ const common = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new WebpackNotifierPlugin({ alwaysNotify: true })
     ],
     module: {
         rules: [{
