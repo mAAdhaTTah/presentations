@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BabiliPlugin = require('babili-webpack-plugin');
 
 const common = {
-    devtool: 'source-map',
     entry: [
         'babel-polyfill',
         'react-hot-loader/patch',
