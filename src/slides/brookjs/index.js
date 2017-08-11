@@ -5,6 +5,7 @@ import mdCurrentStatus20170626 from './current-status-2017-06-26.md'
 import mdDeltaFunctions from './delta-functions.md'
 import mdFutureFeatures20170626 from './future-features-2017-06-26.md'
 import mdGetInvolved from './get-involved.md'
+import mdReactPlusCycleJs from './react+cycle.js.md'
 import mdTheBigReveal from './the-big-reveal.md'
 
 export const ApplicationBootstrapping = () => (
@@ -29,6 +30,12 @@ export const FutureFeatures20170626 = () => (
 export const GetInvolved = () => (
     <Slide transition={['slide']}>
         <Markdown>{mdGetInvolved}</Markdown>
+    </Slide>
+)
+
+export const ReactPlusCycleJs = () => (
+    <Slide transition={['slide']}>
+        <Markdown>{mdReactPlusCycleJs}</Markdown>
     </Slide>
 )
 

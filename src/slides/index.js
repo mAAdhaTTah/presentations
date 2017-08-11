@@ -4,7 +4,6 @@ import mdAboutMe from './about-me.md'
 import mdThankYou from './thank-you.md'
 
 export * from './brookjs'
-export * from './brookjs-at-reactnyc'
 export * from './cycle.js'
 export * from './functional-programming'
 export * from './observables'

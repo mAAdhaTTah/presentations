@@ -1,17 +1,20 @@
-import 'normalize.css'
+import 'normalize.css/normalize.css'
 import 'spectacle/lib/themes/default/index.css'
 import React from 'react'
-import { Deck } from 'spectacle'
+import { Deck, Slide, Markdown } from 'spectacle'
 import createTheme from 'spectacle/lib/themes/default'
+import mdAgenda from './agenda.md'
+import mdTitle from './title.md'
+
 
 import {
-    Title, AboutMe, ReactPlusCycleJs, Agenda, LetsTalkAboutReact,
+    AboutMe, ReactPlusCycleJs, LetsTalkAboutReact,
     DeclarativeViews, ThinkingInReact, ImmutableData, MapFilterReduce,
     UnidirectionalData, EverythingIsAStream, WhatIsAnObservable,
     StreamOfEvents, ArraysOfEvents, PureFunctionOfObservables,
     TheBigReveal, DeltaFunctions, ApplicationBootstrapping,
     CurrentStatus20170626, GetInvolved, ThankYou
-} from '../slides'
+} from '../../slides'
 
 let theme = createTheme({
     primary: '#111111',
@@ -54,6 +57,18 @@ theme = {
         }
     }
 }
+
+const Agenda = () => (
+    <Slide transition={['slide']}>
+        <Markdown>{mdAgenda}</Markdown>
+    </Slide>
+)
+
+const Title = () => (
+    <Slide transition={['slide']}>
+        <Markdown>{mdTitle}</Markdown>
+    </Slide>
+)
 
 export default () => (
     <Deck transition={['slide']} transitionDuration={500} theme={theme}>
