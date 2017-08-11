@@ -7,6 +7,7 @@ const titleCase = text => text.replace(/([A-Z])/g, ' $1')
     .replace(/(By|At)/, word => word.toLowerCase())
     .replace(/(Reactnyc)/, () => 'ReactNYC')
     .replace(/(Brookjs)/, () => 'brookjs')
+    .replace(/(Scripted)/, () => 'ScriptEd')
 
 const IndexRoute = () => (
     <div>
