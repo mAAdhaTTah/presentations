@@ -1,4 +1,4 @@
-import 'normalize.css'
+import '../../../node_modules/normalize.css/normalize.css'
 import 'spectacle/lib/themes/default/index.css'
 import React from 'react'
 import { Deck, Heading, Slide } from 'spectacle'
