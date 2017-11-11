@@ -22,6 +22,10 @@ theme = {
             },
             li: {
                 textAlign: 'left'
+            },
+            'code[class*="language-"], pre[class*="language-"]': {
+                fontSize: '.75em',
+                lineHeight: '1.25'
             }
         },
         components: {
