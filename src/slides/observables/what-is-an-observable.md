@@ -1,6 +1,6 @@
 ### Streams/Observables
 
-functional reactive programming
+functional reactive programming (frp)
 
 ---
 
