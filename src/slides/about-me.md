@@ -4,4 +4,6 @@ James DiGioia, Front-End Developer, Valtech Inc.
 
 Enterprise ecommerce system (Java & .NET)
 
-Developer of brookjs framework (1+ year)
+Developer of brookjs framework
+
+Maintainer of kefir
