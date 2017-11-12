@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Observables by Metaphor Example: Drag and Drop</title>
+    <style>
+        #block {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="block"></div>
+
+<script src="https://kefirjs.github.io/kefir/dist/kefir.min.js" type="application/javascript"></script>
+<script type="application/javascript">
+const $block = document.getElementById('block')
+
+const position$ = Kefir.fromEvents($block, 'mousedown')
+    .map(e => e.target.getBoundingClientRect())
+    .map(rect => ({ top: rect.top, left: rect.left }))
+    .flatMap(start =>
+        Kefir.fromEvents(document.body, 'mousemove')
+            .takeUntilBy(Kefir.fromEvents(document.body, 'mouseup'))
+            .map(e => ({
+                x: e.movementX,
+                y: e.movementY
+            }))
+            .scan((acc, movement) => ({
+                left: acc.left + movement.x,
+                top: acc.top + movement.y
+            }), start)
+    )
+
+position$.observe(pos => {
+    $block.style.top = pos.top + 'px'
+    $block.style.left = pos.left + 'px'
+})
+</script>
+</body>
+</html>

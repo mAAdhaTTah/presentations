@@ -1,13 +1,15 @@
-const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BabiliPlugin = require('babili-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const WebpackNotifierPlugin = require('webpack-notifier')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const BabiliPlugin = require('babili-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const common = {
-    devtool: 'source-map',
     entry: [
         'babel-polyfill',
+        'react-hot-loader/patch',
         './src/index'
     ],
     output: {
@@ -18,7 +20,8 @@ const common = {
     plugins: [
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        })
+        }),
+        new WebpackNotifierPlugin({ alwaysNotify: true })
     ],
     module: {
         rules: [{
@@ -45,7 +48,7 @@ const common = {
             loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
         }]
     }
-};
+}
 
 const dev = {
     devtool: 'cheap-module-eval-source-map',
@@ -54,6 +57,7 @@ const dev = {
             template: path.join(__dirname, '200.html'),
             filename: 'index.html'
         }),
+        new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin()
     ],
@@ -66,7 +70,7 @@ const dev = {
         port: 3000,
         historyApiFallback: true
     }
-};
+}
 
 const prod = {
     plugins: [
@@ -75,17 +79,20 @@ const prod = {
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '200.html'),
             filename: '200.html'
-        })
+        }),
+        new CopyWebpackPlugin([{
+            from: 'CNAME'
+        }])
     ]
-};
+}
 
 switch (process.env.NODE_ENV) {
     case 'development':
-        module.exports = merge(common, dev);
-        break;
+        module.exports = merge(common, dev)
+        break
     case 'production':
-        module.exports = merge(common, prod);
-        break;
+        module.exports = merge(common, prod)
+        break
     default:
-        module.exports = common;
+        module.exports = common
 }
