@@ -6,10 +6,10 @@
 
 ```javascript
 export default function EditorComponent(el, props$) {
-    const keyup$ = Observable.fromEvents(el, 'keyup')
-    const keydown$ = Observable.fromEvents(el, 'keydown')
+    const keyup$ = Kefir.fromEvents(el, 'keyup')
+    const keydown$ = Kefir.fromEvents(el, 'keydown')
     const createRenderStream = props =>
-        Observable.create(observer => {
+        Kefir.create(observer => {
             const loop = requestAnimationFrame(() => {
                 // Update the element
                 observer.complete()
@@ -20,9 +20,8 @@ export default function EditorComponent(el, props$) {
 
     return props$.sampledBy(keyup$.debounce(150))
         .switchMap(props =>
-            createRenderStream(props).takeUntil(keydown$)
+            createRenderStream(props).takeUntilBy(keydown$)
         )
-    }
 }
 ```
 
