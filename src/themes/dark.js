@@ -20,12 +20,24 @@ theme = {
                 color: '#E7AD52',
                 textDecoration: 'none'
             },
+            ul: {
+                maxWidth: '1000px',
+                marginLeft: 'auto',
+                marginRight: 'auto'
+            },
             li: {
                 textAlign: 'left'
             },
             'code[class*="language-"], pre[class*="language-"]': {
                 fontSize: '.75em',
-                lineHeight: '1.25'
+                lineHeight: '1.25',
+                maxWidth: '1000px',
+            },
+            '.playground .playgroundCode': {
+                fontSize: '1.25rem'
+            },
+            '#result': {
+                color: 'black'
             }
         },
         components: {

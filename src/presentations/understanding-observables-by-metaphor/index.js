@@ -1,10 +1,9 @@
 import '../../../node_modules/normalize.css/normalize.css'
-import 'spectacle/lib/themes/default/index.css'
 import React from 'react'
-import { Deck, Heading, MarkdownSlides, Slide, CodePane, Text, Link } from 'spectacle'
+import { Deck, Heading, MarkdownSlides, Slide, Text,
+    Link, List, ListItem, CodePane } from 'spectacle'
 import { DarkTheme } from '../../themes'
 import { WhatIsAnObservable, AboutMe, ThankYou } from '../../slides'
-import source from './prezi.md'
 import source2 from './prezi2.md'
 import delay from './delay.png'
 import excel from './excel.png'
@@ -103,27 +102,47 @@ export default () => (
         </Slide>
         {AboutMe()}
         {WhatIsAnObservable()}
-        {MarkdownSlides(source)}
+        <Slide>
+            <Text>How do we make sense of this?</Text>
+        </Slide>
+        <Slide>
+            <Heading size={2}>Agenda</Heading>
+            <List>
+                <ListItem>Lets look at Code</ListItem>
+                <ListItem>Excel, the Original Reactive App</ListItem>
+                <ListItem>Arrays Over Time</ListItem>
+                <ListItem>Lets look at Code Again</ListItem>
+            </List>
+        </Slide>
+        <Slide>
+            <Heading size={3}>Let's Look at Code</Heading>
+        </Slide>
+        <Slide>
+            <Heading size={4} textColor="secondary">Simple Calculator</Heading>
+        </Slide>
         <Slide>
             <CodePane lang="html" source={html} textSize={'1.5rem'} />
         </Slide>
         <Slide>
-            <CodePane lang="js" source={code} textSize={'1rem'} />
+            <CodePane lang="js" source={code} textSize={'1.2rem'} />
         </Slide>
         <Slide>
-            <CodePane lang="html" source={html2} textSize={'2rem'}/>
+            <Heading size={4} textColor="secondary">Drag and Drop</Heading>
         </Slide>
         <Slide>
-            <CodePane lang="js" source={code2} textSize={'1.4rem'} />
+            <CodePane lang="html" source={html2} textSize={'1.5rem'} />
+        </Slide>
+        <Slide>
+            <CodePane lang="js" source={code2} textSize={'1.5rem'} />
         </Slide>
         {MarkdownSlides(source2
             .replace('excel.png', excel)
             .replace('delay.png', delay))}
         <Slide>
-            <CodePane lang="js" source={code} textSize={'1rem'} />
+            <CodePane lang="js" source={code} textSize={'1.2rem'} />
         </Slide>
         <Slide>
-            <CodePane lang="js" source={code2} textSize={'1.4rem'} />
+            <CodePane lang="js" source={code2} textSize={'1.5rem'} />
         </Slide>
         <Slide maxWidth={1200}>
             <Text bold margin={'40px'}>Interested in exploring further?</Text>
