@@ -213,14 +213,20 @@ export default () => (
         </Slide>
         <Slide>
             <Text>Values are discrete events</Text>
-            <Text margin={'20px 0'}><Code padding={'10px'} textSize={'1.5rem'} textColor={'secondary'}>--1---2---3--4|</Code>&nbsp;&nbsp;&nbsp;</Text>
-            <Text margin={'20px 0'}><Code padding={'10px'} textSize={'1.5rem'} textColor={'secondary'}>delay(20)</Code></Text>
-            <Text margin={'20px 0 40px'}><Code padding={'10px'} textSize={'1.5rem'} textColor={'secondary'}>----1---2---3--4|</Code></Text>
+            <Text margin={'20px 0'}><Code padding={'10px'} textSize={'2rem'} textColor={'secondary'}>--1---2---3--4|</Code>&nbsp;&nbsp;&nbsp;</Text>
+            <Text margin={'20px 0'}><Code padding={'10px'} textSize={'2rem'} textColor={'secondary'}>delay(20)</Code></Text>
+            <Text margin={'20px 0 40px'}><Code padding={'10px'} textSize={'2rem'} textColor={'secondary'}>----1---2---3--4|</Code></Text>
             <Text><Link href={'http://rxmarbles.com/'} target={'_blank'}>RxMarbles.com</Link></Text>
         </Slide>
         <Slide>
             <CodePane lang={'js'} textSize={'2rem'} source={takeUntilBy} style={{ maxWidth: '500px', paddingBottom: '20p' }}/>
             <Text textSize={'2rem'} margin={'20px 0'}>"Take events from A until I get an event from B"</Text>
+        </Slide>
+        <Slide>
+            <Text><Code padding={'10px'} textSize={'2rem'} textColor={'secondary'}>--m--m----m------m--mmmm---m--m---</Code></Text>
+            <Text><Code padding={'10px'} textSize={'2rem'} textColor={'secondary'}>takeUntilBy</Code></Text>
+            <Text><Code padding={'10px'} textSize={'2rem'} textColor={'secondary'}>------------------------u---------</Code></Text>
+            <Text><Code padding={'10px'} textSize={'2rem'} textColor={'secondary'}>--m--m----m------m--mmmm|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Code></Text>
         </Slide>
         <Slide>
             <Heading size={3}>Coordinating events is simplified</Heading>
@@ -234,7 +240,7 @@ export default () => (
         <Slide>
             <CodePane lang="js" source={code2} textSize={'1.5rem'} />
         </Slide>
-        <Slide maxWidth={1200}>
+        <Slide>
             <Text bold margin={'40px'}>Interested in exploring further?</Text>
             <Text textAlign={'left'}>kefir: <Link href={'https://github.com/kefirjs/kefir'}>github.com/kefirjs/kefir/</Link></Text>
             <Text textAlign={'left'}>brookjs: <Link href={'https://github.com/valtech-nyc/brookjs/'}>github.com/valtech-nyc/brookjs/</Link></Text>
