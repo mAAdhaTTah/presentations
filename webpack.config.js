@@ -5,6 +5,7 @@ const WebpackNotifierPlugin = require('webpack-notifier')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BabiliPlugin = require('babili-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const ShakePlugin = require('webpack-common-shake').Plugin
 
 const common = {
     output: {
@@ -86,7 +87,8 @@ const prod = {
         }),
         new CopyWebpackPlugin([{
             from: 'CNAME'
-        }])
+        }]),
+        new ShakePlugin()
     ]
 }
 
