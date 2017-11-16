@@ -7,11 +7,6 @@ const BabiliPlugin = require('babili-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const common = {
-    entry: [
-        'babel-polyfill',
-        'react-hot-loader/patch',
-        './src/index'
-    ],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'app.js',
@@ -51,6 +46,11 @@ const common = {
 }
 
 const dev = {
+    entry: [
+        'babel-polyfill',
+        'react-hot-loader/patch',
+        './src/index'
+    ],
     devtool: 'cheap-module-eval-source-map',
     plugins: [
         new HtmlWebpackPlugin({
@@ -73,6 +73,10 @@ const dev = {
 }
 
 const prod = {
+    entry: [
+        'babel-polyfill',
+        './src/index'
+    ],
     plugins: [
         new webpack.optimize.ModuleConcatenationPlugin(),
         new BabiliPlugin(),
