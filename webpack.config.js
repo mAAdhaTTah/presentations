@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const BabiliPlugin = require('babili-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ShakePlugin = require('webpack-common-shake').Plugin
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const common = {
     output: {
@@ -81,6 +82,9 @@ const prod = {
     plugins: [
         new webpack.optimize.ModuleConcatenationPlugin(),
         new BabiliPlugin(),
+        new UglifyJsPlugin({
+            parallel: true
+        }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '200.html'),
             filename: '200.html'
