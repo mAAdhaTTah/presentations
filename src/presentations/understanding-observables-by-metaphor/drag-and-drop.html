@@ -6,6 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Observables by Metaphor Example: Drag and Drop</title>
     <style>
+        body {
+            width: 100%;
+        }
+        body:before {
+            content: '';
+            float: left;
+            padding-bottom: 100%;
+        }
+        body:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
         #block {
             width: 150px;
             height: 150px;
