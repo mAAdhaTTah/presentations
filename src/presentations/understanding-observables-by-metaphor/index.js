@@ -1,4 +1,3 @@
-import '../../../node_modules/normalize.css/normalize.css'
 import React from 'react'
 import { Deck, Heading, Slide, Text, Link, List,
     ListItem, Code, CodePane, Image, Appear } from 'spectacle'

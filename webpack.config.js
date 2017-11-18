@@ -61,7 +61,6 @@ const dev = {
         }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
     ],
     output: {
         publicPath: '/'
@@ -83,7 +82,10 @@ const prod = {
         new webpack.optimize.ModuleConcatenationPlugin(),
         new BabiliPlugin(),
         new UglifyJsPlugin({
-            parallel: true
+            parallel: true,
+            compressor: {
+                warnings: false
+            }
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '200.html'),
