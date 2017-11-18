@@ -16,28 +16,9 @@ theme = {
         ...theme.screen,
         global: {
             ...theme.screen.global,
-            a: {
-                color: '#E7AD52',
-                textDecoration: 'none'
-            },
-            ul: {
-                maxWidth: '1000px',
-                marginLeft: 'auto',
-                marginRight: 'auto'
-            },
-            li: {
-                textAlign: 'left'
-            },
-            'code[class*="language-"], pre[class*="language-"]': {
-                fontSize: '.75em',
-                lineHeight: '1.25',
-                maxWidth: '1000px',
-            },
-            '.playground .playgroundCode': {
-                fontSize: '1.25rem'
-            },
-            '#result': {
-                color: 'black'
+            body: {
+                ...theme.screen.global.body,
+                fontSize: '1em'
             }
         },
         components: {
@@ -47,15 +28,46 @@ theme = {
                 h3: {
                     ...theme.screen.components.heading.h3,
                     color: theme.screen.colors.secondary
+                },
+                h4: {
+                    ...theme.screen.components.heading.h4,
+                    color: theme.screen.colors.secondary
+                },
+                h5: {
+                    ...theme.screen.components.heading.h5,
+                    color: theme.screen.colors.secondary
                 }
+            },
+            code: {
+                ...theme.screen.components.code,
+                fontSize: '1em',
+                color: theme.screen.colors.secondary
             },
             text: {
                 ...theme.screen.components.text,
-                color: theme.screen.colors.secondary
+                color: theme.screen.colors.secondary,
+                fontSize: '2em',
+                marginBottom: '.5em'
             },
             link: {
                 ...theme.screen.components.link,
-                color: '#E7AD52'
+                color: '#E7AD52',
+                textDecoration: 'none'
+            },
+            list: {
+                listStylePosition: 'inside',
+                maxWidth: '1000px',
+                marginLeft: 'auto',
+                marginRight: 'auto'
+            },
+            listItem: {
+                ...theme.screen.components.listItem,
+                textAlign: 'left'
+            },
+            quote: {
+                ...theme.screen.components.quote,
+                fontSize: 'initial',
+                borderLeft: '10px solid ' + theme.screen.colors.quartenary
             }
         }
     }
