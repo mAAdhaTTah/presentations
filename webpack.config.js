@@ -82,10 +82,7 @@ const prod = {
         new webpack.optimize.ModuleConcatenationPlugin(),
         new BabiliPlugin(),
         new UglifyJsPlugin({
-            parallel: true,
-            compressor: {
-                warnings: false
-            }
+            parallel: true
         }),
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '200.html'),
