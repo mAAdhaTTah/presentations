@@ -1,10 +1,6 @@
 import React from 'react'
-import { Deck, Slide, Markdown } from 'spectacle'
-import createTheme from 'spectacle/lib/themes/default'
-import mdAgenda from './agenda.md'
-import mdTitle from './title.md'
-
-
+import { Deck, Slide, Heading, Code, Text,
+    List, ListItem } from 'spectacle'
 import {
     AboutMe, ReactPlusCycleJs, LetsTalkAboutReact,
     DeclarativeViews, ThinkingInReact, ImmutableData, MapFilterReduce,
@@ -15,20 +11,37 @@ import {
 } from '../../slides'
 import { DarkTheme } from '../../themes'
 
-const Agenda = () => (
+const Title = () => (
     <Slide transition={['slide']}>
-        <Markdown>{mdAgenda}</Markdown>
+        <Heading size={1}>Meet <Code>brookjs</Code></Heading>
+        <Text>A framework for building streaming web applications.</Text>
     </Slide>
 )
 
-const Title = () => (
+const Agenda = () => (
     <Slide transition={['slide']}>
-        <Markdown>{mdTitle}</Markdown>
+        <List>
+            <ListItem>
+                React/Redux: Declarative DOM & one-way data
+                <List>
+                    <ListItem>Functional programming</ListItem>
+                </List>
+            </ListItem>
+            <ListItem>
+                Cycle.js: Everything is a stream
+                <List>
+                    <ListItem>streams/observables</ListItem>
+                </List>
+            </ListItem>
+            <ListItem>
+                Meet <Code>brookjs</Code>
+            </ListItem>
+        </List>
     </Slide>
 )
 
 export default () => (
-    <Deck transition={['slide']} transitionDuration={500} theme={theme}>
+    <Deck transition={['slide']} transitionDuration={500} theme={DarkTheme}>
         {Title()}
         {AboutMe()}
         {ReactPlusCycleJs()}
