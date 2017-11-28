@@ -53,7 +53,7 @@ const dev = {
         'react-hot-loader/patch',
         './src/index'
     ],
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-source-map',
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, '200.html'),
