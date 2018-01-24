@@ -62,5 +62,58 @@ export default () => (
                 <ListItem textSize={40}>Peer-to-Peer digital payments<Appear><List><ListItem textSize={32}>Bitcoin</ListItem></List></Appear></ListItem>
             </List>
         </Slide>
+        <Slide>
+            <Heading size={3}>So....</Heading>
+            <Appear><Heading size={3}>what is bitcoin then?</Heading></Appear>
+        </Slide>
+        <Slide>
+            <Text>Blockchain is a distributed ledger</Text>
+            <Text>Bitcoin is a currency built on top of this ledger</Text>
+        </Slide>
+        <Slide>
+            <Text>Individuals have wallets on Bitcoin's blockchain</Text>
+            <Text>This validates that a user controls a particular account on the ledger</Text>
+            <Appear>
+                <Text>Think private key vs public key</Text>
+            </Appear>
+            <Appear>
+                <Text>Private key - wallet itself</Text>
+            </Appear>
+            <Appear>
+                <Text>Public key - wallet address</Text>
+            </Appear>
+        </Slide>
+        <Slide>
+            <Text>When I want to send money to a wallet address,</Text>
+            <Text>the software bundles that transaction with other transactions into a block.</Text>
+            <Text>The network validates the block, cryptographically linking it to the previous block.</Text>
+        </Slide>
+        <Slide>
+            <Heading size={4}>Every transaction has to be validated by the network</Heading>
+        </Slide>
+        <Slide>
+            <Heading size={3}>So where does bitcoin come from?</Heading>
+        </Slide>
+        <Slide>
+            <Image src={require('./miners.jpg')} />
+        </Slide>
+        <Slide>
+            <List>
+                <ListItem>Miners are computers that compute the cryptographic link between blocks</ListItem>
+                <Appear><ListItem>Network validates that the result is correct</ListItem></Appear>
+                <Appear><ListItem>Once network validates, block is added to the chain</ListItem></Appear>
+            </List>
+        </Slide>
+        <Slide>
+            <Heading size={4}>Miners are rewarded with a bitcoin for this computation</Heading>
+        </Slide>
+        <Slide>
+            <Image src={require('./blockchain.jpg')} />
+        </Slide>
+        <Slide>
+            <Text>The difficulty calculating this link is what limits the number of bitcoin</Text>
+            <Text>The Bitcoin network has a hard cap on number of bitcoin that can be mined</Text>
+            <Text>This scarcity is what gives them their value</Text>
+        </Slide>
     </Deck>
 )
