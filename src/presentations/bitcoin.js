@@ -44,11 +44,11 @@ export default () => (
             </List>
         </Slide>
         <Slide>
-            <Image src="https://www.ibm.com/cloud/garage/images/architecture/blockchain-build.png"></Image>
+            <Image src={require('./blockchain-build.png')} />
         </Slide>
         <Slide>
             <List>
-                <Image width={960} height={536} src="https://media2.giphy.com/media/HStDYzYFt2Lh6/giphy-downsized.gif"></Image>
+                <Image width={960} height={536} src={require('./network.gif')} />
             </List>
         </Slide>
         <Slide>
