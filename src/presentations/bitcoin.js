@@ -116,6 +116,17 @@ export default () => (
             <Text>This scarcity is what gives them their value</Text>
         </Slide>
         <Slide>
+            <Heading>Blockchain, the good</Heading>
+        </Slide>
+        <Slide>
+            <List>
+                <ListItem>Immutable History<Appear><List><ListItem textSize={32}>What goes in the blockchain, stays in the blockchain</ListItem></List></Appear></ListItem>
+                <ListItem>Transparent History<Appear><List><ListItem textSize={32}>Auditable. Anyone can view at any time</ListItem></List></Appear></ListItem>
+                <ListItem>Secure<Appear><List><ListItem textSize={32}>Cryptographically and architecturally</ListItem></List></Appear></ListItem>
+                <Appear><ListItem>It's only the beginning!</ListItem></Appear>
+            </List>
+        </Slide>
+        <Slide>
             <Heading>Bitcoin, the good</Heading>
         </Slide>
         <Slide>
