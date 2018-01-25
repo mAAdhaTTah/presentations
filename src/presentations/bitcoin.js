@@ -1,6 +1,8 @@
 import React from 'react'
 import { DarkTheme } from '../themes'
-import { Deck, Slide, Heading, Text, List, ListItem, Image, Appear } from 'spectacle'
+import { ThankYou } from '../slides'
+import { Deck, Slide, Heading, Text, List, ListItem, Image, Appear,
+    Quote, BlockQuote, Cite } from 'spectacle'
 
 export default () => (
     <Deck transitionDuration={500} theme={DarkTheme} transition={['slide']}>
@@ -20,7 +22,8 @@ export default () => (
             <Heading size={3}>
                 Disclosures
             </Heading>
-            <Text>TKTK</Text>
+            <Text>James - ~$100 in bitcoin currently</Text>
+            <Text>Daryl - ~$850 in bitcoin currently</Text>
         </Slide>
         <Slide>
             <Heading size={3}>
@@ -137,5 +140,35 @@ export default () => (
                 <ListItem>Benefits for merchants<Appear><List><ListItem textSize={32}>No reversals. No limits.</ListItem></List></Appear></ListItem>
             </List>
         </Slide>
+        <Slide>
+            <Heading size={4} fill>The Skeptic Perspective</Heading>
+            <Heading size={5} fit>Blockchain & Bitcoin is not a revolution</Heading>
+        </Slide>
+        <Slide>
+            <Heading size={5} fill>Blockchain</Heading>
+            <List>
+                <ListItem>Blockchain hasn't proven to be useful outside of "currency"</ListItem>
+                <Appear><ListItem>Computing new blocks on the Blockchain is expensive</ListItem></Appear>
+                <Appear><ListItem>For many use cases, distributed isn't a feature</ListItem></Appear>
+            </List>
+        </Slide>
+        <Slide>
+            <Heading size={5} fill>Bitcoin</Heading>
+            <List>
+                <ListItem>Bitcoin isn't a currency, it's a commodity</ListItem>
+                <Appear><ListItem>Bitcoin & cryptocurrencies are currently in a bubble</ListItem></Appear>
+                <Appear><ListItem>A unregulated market is a bug, not a feature</ListItem></Appear>
+            </List>
+        </Slide>
+        <Slide>
+            <BlockQuote>
+                <Quote textColor={'secondary'} textSize={30}>Bitcoin was supposed to demonstrate the power of a true free market... it's full of scams, rent-seekers, theft, useless for real purchases and accelerates climate change. Mission accomplished.</Quote>
+                <Cite>Adam Chalmers</Cite>
+            </BlockQuote>
+        </Slide>
+        <Slide>
+            <Heading size={1} textSize={60}>Bitcoin is a technological solution to a political problem, and is emblematic of Silicon Valley's disinterst in doing the hard work of politics.</Heading>
+        </Slide>
+        {ThankYou()}
     </Deck>
 )
