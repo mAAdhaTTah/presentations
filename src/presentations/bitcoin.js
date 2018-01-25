@@ -115,5 +115,27 @@ export default () => (
             <Text>The Bitcoin network has a hard cap on number of bitcoin that can be mined</Text>
             <Text>This scarcity is what gives them their value</Text>
         </Slide>
+        <Slide>
+            <Heading>Blockchain, the good</Heading>
+        </Slide>
+        <Slide>
+            <List>
+                <ListItem>Immutable History<Appear><List><ListItem textSize={32}>What goes in the blockchain, stays in the blockchain</ListItem></List></Appear></ListItem>
+                <ListItem>Transparent History<Appear><List><ListItem textSize={32}>Auditable. Anyone can view at any time</ListItem></List></Appear></ListItem>
+                <ListItem>Secure<Appear><List><ListItem textSize={32}>Cryptographically and architecturally</ListItem></List></Appear></ListItem>
+                <Appear><ListItem>It's only the beginning!</ListItem></Appear>
+            </List>
+        </Slide>
+        <Slide>
+            <Heading>Bitcoin, the good</Heading>
+        </Slide>
+        <Slide>
+            <List>
+                <ListItem>Users are anonymous<Appear><List><ListItem textSize={32}>No personal data needed for transfer. No taxes.</ListItem></List></Appear></ListItem>
+                <ListItem>No third party involvement<Appear><List><ListItem textSize={32}>No banks. Transactions/accounts can't be frozen.</ListItem></List></Appear></ListItem>
+                <ListItem>Send/Receive worldwide</ListItem>
+                <ListItem>Benefits for merchants<Appear><List><ListItem textSize={32}>No reversals. No limits.</ListItem></List></Appear></ListItem>
+            </List>
+        </Slide>
     </Deck>
 )
