@@ -119,10 +119,12 @@ export default () => (
             <Heading>Bitcoin, the good</Heading>
         </Slide>
         <Slide>
-            <ListItem>Users are anonymous<Appear><List><ListItem textSize={32}>No personal data needed for transfer. No taxes.</ListItem></List></Appear></ListItem>
-            <ListItem>No third party involvement<Appear><List><ListItem textSize={32}>No banks. Transactions/accounts can't be frozen.</ListItem></List></Appear></ListItem>
-            <ListItem>Send/Receive worldwide</ListItem>
-            <ListItem>Benefits for merchants<Appear><List><ListItem textSize={32}>No reversals. No limits.</ListItem></List></Appear></ListItem>
+            <List>
+                <ListItem>Users are anonymous<Appear><List><ListItem textSize={32}>No personal data needed for transfer. No taxes.</ListItem></List></Appear></ListItem>
+                <ListItem>No third party involvement<Appear><List><ListItem textSize={32}>No banks. Transactions/accounts can't be frozen.</ListItem></List></Appear></ListItem>
+                <ListItem>Send/Receive worldwide</ListItem>
+                <ListItem>Benefits for merchants<Appear><List><ListItem textSize={32}>No reversals. No limits.</ListItem></List></Appear></ListItem>
+            </List>
         </Slide>
     </Deck>
 )
