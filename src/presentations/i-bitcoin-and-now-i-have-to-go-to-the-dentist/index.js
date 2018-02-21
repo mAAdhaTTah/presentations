@@ -1,6 +1,6 @@
 import React from 'react'
-import { DarkTheme } from '../themes'
-import { ThankYou } from '../slides'
+import { DarkTheme } from '../../themes'
+import { ThankYou } from '../../slides'
 import { Deck, Slide, Heading, Text, List, ListItem, Image, Appear,
     Quote, BlockQuote, Cite } from 'spectacle'
 
