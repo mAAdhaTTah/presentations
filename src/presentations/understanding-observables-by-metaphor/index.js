@@ -4,53 +4,8 @@ import { Deck, Heading, Slide, Text, Link, List,
 import { DarkTheme } from '../../themes'
 import { WhatIsAnObservable, AboutMe, ThankYou } from '../../slides'
 import excel from './excel.png'
-
-const html = `<div class="calculator">
-    <input type="text" id="first" class="number">
-
-    <select name="operation" id="operation">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select>
-
-    <input type="text" id="second" class="number">
-
-    <div id="result"></div>
-</div>`
-
-// language=JavaScript
-const code = `const first$ = Kefir.fromEvents(document.getElementById('first'), 'input')
-    .map(event => parseInt(event.target.value, 10))
-
-const second$ = Kefir.fromEvents(document.getElementById('second'), 'input')
-    .map(event => parseInt(event.target.value, 10))
-
-const operation$ = Kefir.fromEvents(document.getElementById('operation'), 'change')
-    .map(event => event.target.value)
-    .merge(Kefir.constant('+'))
-
-const result$ = Kefir.combine({ f: first$, s: second$, op: operation$ }, ({ f, s, op }) => {
-    if (Number.isNaN(f) || Number.isNaN(s)) {
-        return 'ERR'
-    }
-
-    switch (op) {
-        case '+':
-            return f + s
-        case '-':
-            return f - s
-        case '*':
-            return f * s
-        case '/':
-            return f / s
-        default:
-            return 'ERR'
-    }
-})
-
-result$.observe(result => { document.getElementById('result').textContent = result })`
+import * as basic from './basic'
+import * as calculator from './calculator'
 
 const html2 = `<style>
     #block {
@@ -145,13 +100,22 @@ export default () => (
             <Heading size={3}>Let's Look at Code</Heading>
         </Slide>
         <Slide>
+            <Heading size={4} textColor="secondary">Basic Example</Heading>
+        </Slide>
+        <Slide>
+            <CodePane lang="html" source={basic.html} textSize={'1.5rem'} />
+        </Slide>
+        <Slide>
+            <CodePane lang="js" source={basic.js} textSize={'1.2rem'} />
+        </Slide>
+        <Slide>
             <Heading size={4} textColor="secondary">Simple Calculator</Heading>
         </Slide>
         <Slide>
-            <CodePane lang="html" source={html} textSize={'1.5rem'} />
+            <CodePane lang="html" source={calculator.html} textSize={'1.5rem'} />
         </Slide>
         <Slide>
-            <CodePane lang="js" source={code} textSize={'1.2rem'} />
+            <CodePane lang="js" source={calculator.js} textSize={'1.2rem'} />
         </Slide>
         <Slide>
             <Heading size={4} textColor="secondary">Drag and Drop</Heading>
@@ -169,29 +133,29 @@ export default () => (
             <Image src={excel} alt="excel"></Image>
         </Slide>
         <Slide>
-            <Text margin={'30px 0'}>Cells can be independent values</Text>
+            <Text margin={'30px 0'}>Cells are independent values</Text>
             <Text>A1 is "2", B1 is "10"</Text>
         </Slide>
         <Slide>
             <Text fit>Cells can also be formulas dependent on other cells</Text>
-            <Text margin={'30px 0'}>C1 is "=SUM(A1, B1)"</Text>
-            <Text fit>If A1 or B1 changes, C1 changes in response</Text>
+            <Text margin={'30px 0'}>C1 is <Code>=SUM(A1, B1)</Code></Text>
+            <Text fit>C1 syncs with the values from A1 & B1</Text>
         </Slide>
         <Slide>
             <Text fit margin={'30px 0'}>We can consider Observables the same way</Text>
             <Text><Code textColor="secondary">first$</Code> & <Code textColor="secondary">second$</Code> are Excel cells, holding the value of each input field</Text>
         </Slide>
         <Slide>
-            <Text fit>Observables can represent the current data</Text>
+            <Text fit>Observables represent the current data</Text>
             <Text fit margin={'30px 0'}>Data can be derived from other data with functions</Text>
-            <Text margin={'30px 0'}>Observables can be combined to create new streams of data</Text>
+            <Text margin={'30px 0'}>Observables can be combined to create new representations of the data</Text>
         </Slide>
         <Slide>
-            <Text textSize={'1.25rem'} margin={'0 0 20px'}><Code padding={'0px'} textSize={'1.25rem'} textColor={'secondary'}>combine</Code> (<Code padding={'0px'} textSize={'1.25rem'} textColor="secondary">combineLatest</Code> in RxJS) represents the dependent calculation</Text>
+            <Text textSize={'1.25rem'} margin={'0 0 20px'}><Code padding={'0px'} textSize={'1.25rem'} textColor={'secondary'}>combine</Code> represents the dependent calculation</Text>
             <CodePane source={combine} lang="js" textSize={'1.5rem'}></CodePane>
         </Slide>
         <Slide>
-            <Heading size={3} fit margin={'30px 0'}>It turns your events into data</Heading>
+            <Heading size={3} fit margin={'30px 0'}>It turns your external inputs into data</Heading>
             <Text>Any state in your application can be represented this way</Text>
         </Slide>
         <Slide>
@@ -234,7 +198,7 @@ export default () => (
             <Heading size={3}>Let's Look at Code Again</Heading>
         </Slide>
         <Slide>
-            <CodePane lang="js" source={code} textSize={'1.2rem'} />
+            <CodePane lang="js" source={calculator.js} textSize={'1.2rem'} />
         </Slide>
         <Slide>
             <CodePane lang="js" source={code2} textSize={'1.5rem'} />

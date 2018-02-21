@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Observables by Metaphor Example: Calculator</title>
+</head>
+<body>
+<div class="block">
+    <input type="text" id="input">
+    <div id="result"></div>
+</div>
+
+<script src="https://kefirjs.github.io/kefir/dist/kefir.min.js" type="application/javascript"></script>
+<script type="application/javascript">
+const $input = document.getElementById('input')
+const $result = document.getElementById('result')
+
+const input$ = Kefir.fromEvents($input, 'input')
+    .map(event => event.target.value)
+
+input$.observe(result => { $result.textContent = result })
+</script>
+</body>
+</html>
