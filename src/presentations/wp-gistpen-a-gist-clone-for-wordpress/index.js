@@ -19,7 +19,9 @@ export default () => (
 
 James DiGioia, Front-End Developer, Valtech Inc.
 
-Developer of brookjs & jaxion frameworks`)}
+Enterprise ecommerce system (Java & .NET)
+
+Maintainer of Kefir`)}
         <Slide>
             <Heading size={1}>Agenda</Heading>
             <Markdown>{`* Why I built WP-Gistpen
