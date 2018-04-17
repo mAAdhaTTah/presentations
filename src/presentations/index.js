@@ -1,5 +1,5 @@
 export { default as BrookjsAtReactnyc } from './brookjs-at-reactnyc'
-// export { default as ScriptedInternshipYear1 } from './scripted-internship-year-1'
 export { default as UsingVuejsInServerRenderedEnvironments } from './using-vuejs-in-server-rendered-environments'
 export { default as UnderstandingObservablesByMetaphor } from './understanding-observables-by-metaphor'
 export { default as IBitcoinAndNowIHaveToGoToTheDentist } from './i-bitcoin-and-now-i-have-to-go-to-the-dentist'
+export { default as WpgistpenAGistCloneForWordpress } from './wp-gistpen-a-gist-clone-for-wordpress'
