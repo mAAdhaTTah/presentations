@@ -3,3 +3,4 @@ export { default as UsingVuejsInServerRenderedEnvironments } from './using-vuejs
 export { default as UnderstandingObservablesByMetaphor } from './understanding-observables-by-metaphor'
 export { default as IBitcoinAndNowIHaveToGoToTheDentist } from './i-bitcoin-and-now-i-have-to-go-to-the-dentist'
 export { default as WpgistpenAGistCloneForWordpress } from './wp-gistpen-a-gist-clone-for-wordpress'
+export { default as UnitTestingReactWithJestAndRtl } from './unit-testing-react-with-jest-and-rtl'

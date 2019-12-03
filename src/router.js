@@ -4,7 +4,7 @@ import sheet from 'sheet-router'
 import * as Prezis from './presentations'
 
 const titleCase = text => text.replace(/([A-Z])/g, ' $1')
-    .replace(/(By|At|In|And|To|The|For)\s/g, word => word.toLowerCase())
+    .replace(/(By|At|In|And|To|The|For|With)\s/g, word => word.toLowerCase())
     .replace(/(Reactnyc)/, () => 'ReactNYC')
     .replace(/(Brookjs)/, () => 'brookjs')
     .replace(/(Scripted)/, () => 'ScriptEd')
@@ -12,6 +12,7 @@ const titleCase = text => text.replace(/([A-Z])/g, ' $1')
     .replace(/(Vuejs)/, () => 'Vue.js')
     .replace(/(Wpgistpen)/, () => 'WP-Gistpen')
     .replace(/(Wordpress)/, () => 'WordPress')
+    .replace(/(Rtl)/, () => 'RTL')
 
 const IndexRoute = () => (
     <div>
