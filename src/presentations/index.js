@@ -4,3 +4,4 @@ export { default as UnderstandingObservablesByMetaphor } from './understanding-o
 export { default as IBitcoinAndNowIHaveToGoToTheDentist } from './i-bitcoin-and-now-i-have-to-go-to-the-dentist'
 export { default as WpgistpenAGistCloneForWordpress } from './wp-gistpen-a-gist-clone-for-wordpress'
 export { default as UnitTestingReactWithJestAndRtl } from './unit-testing-react-with-jest-and-rtl'
+export { default as OptionalChainingAndNullishCoalescing } from './optional-chaining-and-nullish-coalescing'

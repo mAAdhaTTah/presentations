@@ -43,6 +43,10 @@ theme = {
                 fontSize: '1em',
                 color: theme.screen.colors.secondary
             },
+            syntax: {
+                ...theme.screen.components.syntax,
+                fontSize: '2em',
+            },
             text: {
                 ...theme.screen.components.text,
                 color: theme.screen.colors.secondary,
